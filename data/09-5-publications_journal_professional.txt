@@ -1,0 +1,2 @@
+authors;titleofpublication;titlejournal;volume;issueornumber;pages;yearofpublication;doiorwebaddress
+% No professional journal publications

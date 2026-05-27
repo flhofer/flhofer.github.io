@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Personal web site of Florian Hofer" />
+        <meta name="author" content="Florian Hofer" />
+        <title>Florian Hofer</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <script src="js/scripts.js"></script>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Florian Hofer</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-5 gx-lg-5 justify-content-center">
+                    <div class="col-lg-5 text-center">
+                        <img src="assets/images/me.jpg" class="mt-2 rounded-circle" style="width:180px; height:180px; object-fit:cover;">
+                        <h3 class="mt-3">Dr. Florian Hofer</h3>
+                        <p class="mt-0 mb-0 text-secondary">Researcher</p>
+                        <p class="mt-0 text-secondary"><a href="https://www.unibz.it/en/faculties/engineering/academic-staff/person/37220-florian-hofer">Free University of Bozen/Bolzano</a></p>
+                        <span id="obf"><script type="text/javascript">document.getElementById("obf").innerHTML="<n uers=\"znvygb:Sybevna.Ubsre@havom.vg\" ><v pynff='ov-rairybcr-cncre sf-2 grkg-cevznel'></v></n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});</script>
+<noscript><span style="unicode-bidi:bidi-override;direction:rtl;">ti.zbinu@refoH.nairolf</span></noscript></span>
+                        <a href="https://scholar.google.com/citations?user=Abi2m8sAAAAJ&hl=en"><i class="bi-mortarboard fs-2 text-primary"></i></a>
+                        <a href="https://github.com/flhofer"><i class="bi-github fs-2 text-primary"></i></a>
+                        <a href="https://www.florianhofer.it"><i class="bi-globe fs-2 text-primary"></i></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="mt-0"> <i class="bi-info-circle fs-2 text-primary"></i> About me</h3>
+                        <p>Florian Hofer is a researcher at the Free University of Bozen-Bolzano, Faculty of Engineering.</p>
+                        <p>He holds a PhD in Computer Science from the Free University of Bozen-Bolzano (2022), with a thesis on "Resilience and Weaknesses of Smart Systems' Architectures".</p>
+                        <p>His research focuses on enhancing the security and reliability of smart system architectures. He is particularly interested in real-time systems, industrial control systems, programmable logic controllers (IEC 61131-3), containerization and virtualization for Industry 4.0, cyber-physical systems, and IoT architectures including LoRaWAN and smart-lighting systems.</p>
+                        <p><a class="btn btn-primary btn-xl" href="https://api.scientificnet.org/public-webpage-data/staff/37220/cv">Download CV</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Events -->
+        <section class="page-section bg-light" id="events">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0"><i class="bi-people fs-2 text-primary"></i> Events</h2>
+                        <hr class="divider" />
+                        <div class="mb-4 text-start">
+                            <p>I believe that the exchange with other scientists and practitioners is essential to ensure that my work is relevant and impactful. Here is a selection of events I have participated in or presented at:</p>
+                            <ul><div id="listofevents">
+                            {% for event in events|reverse %}
+                                <event expires="{{event.endofevent_as_ISO_8601}}">
+                                <li> 
+                                    {{event.startofevent}}&#8211;{{event.endofevent}}: {{event.role}} at the {% if event.website != "" %}<a href="{{event.website}}">{% endif %}{{event.event}}{% if event.website != "" %}</a>{% endif %}{% if event.acronym != "" %} ({{event.acronym}} 20{{event.yearofevent}}){% endif %}
+                                    {% for role in event.roles %}
+                                        {% if role.lower().__contains__("chair") or role.lower().__contains__("organiz") %}
+                                            <span class="badge text-bg-danger">{{role}}</span>
+                                        {% endif %}
+                                        {% if role.lower().__contains__("pc member") %}
+                                            <span class="badge text-bg-primary">{{role}}</span>
+                                        {% endif %}
+                                        {% if not role.lower().__contains__("chair") and not role.lower().__contains__("organiz") and not role.lower().__contains__("pc member") %}
+                                            <span class="badge text-bg-secondary">{{role}}</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                </li>
+                                </event>
+                            {% endfor %}
+                            </div></ul>
+                            <script>
+                                const c = document.getElementById("listofevents").children;
+                                for(var i=0; i<c.length; i++){
+                                    const item = c[i];
+                                    const expiresAt = item.attributes["expires"].value;
+                                    const expiresAtAsDate = Date.parse(expiresAt);
+                                    var today = new Date();
+                                    today.setHours(0,0,0,0);
+
+                                    if(expiresAtAsDate < today) {
+                                        var listItem = item.children[0]
+                                        listItem.classList.add("expired_event");
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Research-->
+        <section class="page-section" id="research">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0"><i class="bi-mortarboard fs-2 text-primary"></i> Research activities and interest</h2>
+                        <hr class="divider" />
+                        <div class="mb-4 text-start">
+                            <p>My research lies at the intersection of software engineering and hardware/systems engineering, focusing on the challenges posed by Industry 4.0 and smart system architectures. I am particularly interested in how software systems can be made more reliable, deterministic, and secure when operating in real-time and safety-critical environments.</p>
+                            <p>Key research topics include: real-time systems and scheduling, industrial control systems and programmable logic controllers (PLCs / IEC 61131-3), containerization and virtualization for cyber-physical systems, smart-lighting and LoRaWAN/IoT architectures, and automated software testing for embedded and industrial systems.</p>
+                            <p>This is the list of research projects I participated in:</p>
+                            <ul><div id="listofprojects">
+                                {% for project in projects|reverse %}
+                                    <project expires="{{project.endofproject_as_ISO_8601}}">
+                                    <li> 
+                                        {{project.startofproject}}&#8211;{{project.endofproject}}: {{project.rolename}}, 
+                                        {% if project.website != "" %}<a href="{{project.website}}">{% endif %}<i>{{project.projecttitle}}{% if project.website != "" %}</a>{% endif %}{% if project.acronym != "" %} ({{project.acronym}}){% endif %}</i>. Funding body: {{project.fundingbody}}.
+                                        {% if project.roletype == 1 %}
+                                            <span class="badge text-bg-danger">{{project.rolename}}</span>            
+                                        {% elif project.roletype == 2 %}                                            
+                                            <span class="badge text-bg-primary">{{project.rolename}}</span>
+                                        {% else %}
+                                            <span class="badge text-bg-secondary">{{project.rolename}}</span>                        
+                                        {% endif %}
+                                    </li>
+                                    </project>
+                                {% endfor %}
+                            </div></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Teaching -->
+        <section class="page-section bg-light" id="teaching">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0"><i class="bi-book fs-2 text-primary"></i> Teaching activities</h2>
+                        <hr class="divider" />
+                        <div class="mb-4 text-start">
+                            <p>Teaching is an integral part of my academic work. I aim to bring my research experience into the classroom, bridging the gap between theoretical concepts and practical applications in software engineering and distributed systems.</p>
+                            <p>This is the list of courses I have held:</p>
+                            <ul><div id="listofteaching">
+                                {% for item in teaching %}
+                                    <teaching>
+                                    <li> 
+                                        {{item.course}}, {{item.ects}} ECTS
+                                        {% if item.islecturer == True %}
+                                            <span class="badge text-bg-primary">Lecturer</span>     
+                                        {% endif %}                                                   
+                                        {% if item.isteachingassistant == 1 %}                                            
+                                            <span class="badge text-bg-secondary">Teaching Assistant</span>             
+                                        {% endif %}
+                                        ({{item.period}})
+                                    </li>
+                                    </teaching>
+                                {% endfor %}
+                            </div></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <!-- Publications -->
+        <section class="page-section" id="publications">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0"><i class="bi-file-earmark-text fs-2 text-primary"></i> Publications</h2>
+                        <hr class="divider" />
+                        <div class="mb-4 text-start">
+                            <p>Here is the list of my current publications. Please also have a look at my page on <a href="https://scholar.google.com/citations?user=Abi2m8sAAAAJ&hl=en">Google Scholar</a>.</p>
+                            <ol><div id="listofpublications">
+                                {% for item in publications|reverse %}
+                                    <publication>
+                                    <li>
+                                        {% if item.type == 1 %}<span class="badge badge-bg-book">Book</span>{% endif %}
+                                        {% if item.type == 2 %}<span class="badge badge-bg-chapter">Book chapter</span>{% endif %}
+                                        {% if item.type == 3 %}<span class="badge badge-bg-conference">{{item.typeofcontribution}}</span>{% endif %}
+                                        {% if item.type == 4 %}<span class="badge badge-bg-journal">Journal paper</span>{% endif %}
+                                        {{item.authors}} ({{item.yearofpublication}}{% if item.type == 3 %}, {{item.dates}}{% endif %}).{% if item.type == 1 or item.type == 3 %} <i>{{item.titleofpublication}}</i>{% endif %}{% if item.type == 2 or item.type == 4 %} {{item.titleofpublication}}.{% endif %}{% if item.type == 2 %} In {{item.editors}} (Eds.), <i>{{item.titlebook}}</i>. (pp. {{item.pages}}).{% endif %}{% if item.type == 1 %} {{item.publisher}}{% endif %}{% if item.type == 3 %} {{item.conference}} ({{item.acronym}}), {{item.location}}.{% endif %}{% if item.type == 4 %} <i>{{item.titlejournal}} {{item.volume}}</i>{% if item.issueornumber != "" %}({{item.issueornumber}}){% endif %}, {{item.pages}}.{% endif %}{% if item.doiorwebaddress != "" %} <a href="{{item.doiorwebaddress}}">{{item.doiorwebaddress}}</a>{% endif %}
+                                    </li>
+                                    </publication>
+                                {% endfor %}
+                            </div>
+                        </div></ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/template.js"></script>    
+    </body>
+</html>

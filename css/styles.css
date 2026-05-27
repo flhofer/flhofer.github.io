@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: din-bold;
+  src: url("../assets/fonts/D-DIN-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: din;
+  src: url("../assets/fonts/D-DIN.woff") format("woff");
+}
+
+@font-face {
+  font-family: din-condensed;
+  src: url("../assets/fonts/D-DINCondensed.woff") format("woff");
+}
+
+* {
+  font-size: 1.1rem;  
+  font-family: din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+input, textarea, button {font-family: inherit}
+
+.page-section {
+  padding: 8rem 0;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+hr.divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #000000;
+  opacity: 1;
+}
+
+hr.divider-light {
+  background-color: #fff;
+}
+
+#mainNav {
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.important {
+  background: rgba(255, 255, 0, 0.397);
+  padding: 0px 0px;
+}
+
+#mainNav .navbar-brand {
+  /* font-weight: 700; */
+  color: #212529;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: #6c757d;
+  /* font-weight: 700; */
+  /* font-size: 1.25rem; */
+  padding: 0.75rem 0;
+}
+#mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
+  color: var(--bs-primary);
+}
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: var(--bs-primary) !important;
+}
+@media (min-width: 992px) {
+  #mainNav {
+    box-shadow: none;
+    /* background-color: transparent; */
+  }
+  #mainNav .navbar-brand {
+    color: #212529;
+  }
+  #mainNav .navbar-brand:hover {
+    color: var(--bs-primary);
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    color: #212529;
+    padding: 0 1rem;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: var(--bs-primary);
+  }
+  #mainNav .navbar-nav .nav-item:last-child .nav-link {
+    padding-right: 0;
+  }
+  #mainNav.navbar-shrink {
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+    background-color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-brand:hover {
+    color: var(--bs-primary);
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+    color: var(--bs-primary);
+  }
+}
+
+.expired_event {
+  color: rgb(128, 128, 128);
+}
+
+.expired_event a {
+  color: rgb(128, 128, 128);
+}
+
+.expired_event .badge {
+  opacity: .3;
+}
+
+.badge {
+  font-weight: 400 !important;
+}
+
+.badge-bg-book {
+  background-color: rgb(250, 195, 53)
+}
+
+.badge-bg-chapter {
+  background-color: rgb(250, 195, 53)
+}
+
+.badge-bg-conference {
+  background-color: rgb(9, 96, 150)
+}
+
+.badge-bg-journal {
+  background-color: rgb(193, 36, 103)
+}
+
+a {
+  white-space: pre-wrap; /* CSS3 */    
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */    
+  white-space: -o-pre-wrap; /* Opera 7 */    
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
