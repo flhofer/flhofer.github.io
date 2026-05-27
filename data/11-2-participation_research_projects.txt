@@ -1,0 +1,2 @@
+startofproject;endofproject;projecttitle;acronym;fundingbody;website;awardholders
+1.9.17;31.8.22;Towards Merging Real-Time and Safety-Critical Cyberphysical Systems with Cloud/Fog Computing;RTCS;unibz;;Barbara Russo

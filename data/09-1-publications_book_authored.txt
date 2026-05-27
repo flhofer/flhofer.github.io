@@ -1,0 +1,2 @@
+starred;authors;titleofpublication;publisher;yearofpublication;doiorwebaddress
+2;F. Hofer;Resilience and Weaknesses of Smart Systems' Architectures (PhD Thesis);Free University of Bozen-Bolzano;2022;

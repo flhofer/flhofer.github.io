@@ -1,0 +1,2 @@
+starred;authors;titleofpublication;publisher;yearofpublication;doiorwebaddress
+%no book edited publications

@@ -1,0 +1,4 @@
+startofevent;endofevent;event;role;acronym;yearofevent;website
+4.5.22;6.5.22;13th ACM/IEEE International Conference on Cyber-Physical Systems, Milano, Italy;Presenter;ICCPS;22;https://iccps.acm.org
+27.6.22;1.7.22;2022 IEEE 46th Annual Computers, Software, and Applications Conference, Torino, Italy;Presenter;COMPSAC;22;https://ieeecompsac.computer.org/2022/
+1.12.22;2.12.22;South Tyrol Free Software Conference, Bolzano, Italy;Speaker;SFSCON;22;https://www.sfscon.it
