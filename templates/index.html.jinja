@@ -155,11 +155,11 @@
                                 {% for item in teaching %}
                                     <teaching>
                                     <li> 
-                                        {{item.course}}, {{item.ects}} ECTS
+                                        {{item.course}}{% if item.ects %}, {{item.ects}} ECTS{% endif %}
                                         {% if item.islecturer == True %}
                                             <span class="badge text-bg-primary">Lecturer</span>     
                                         {% endif %}                                                   
-                                        {% if item.isteachingassistant == 1 %}                                            
+                                        {% if item.isteachingassistant == True %}                                            
                                             <span class="badge text-bg-secondary">Teaching Assistant</span>             
                                         {% endif %}
                                         ({{item.period}})
