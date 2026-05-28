@@ -1,10 +1,15 @@
 startofevent;endofevent;event;role;acronym;yearofevent;website
+10.4.18;13.4.18;CPS-IoT Week 2018, Porto, Portugal;Participant;CPSWeek;18;https://cpsweek2018.inria.fr
 11.10.18;12.10.18;12th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement, Oulu, Finland;Presenter;ESEM;18;https://esem-conferences.org
 15.10.18;18.10.18;2018 IEEE International Symposium on Software Reliability Engineering Workshops, Memphis, TN, USA;Presenter;ISSREW;18;https://issre.github.io/2018/
 13.10.19;13.10.19;2nd International Workshop on Operating Systems for Real-Time and Embedded Systems, New York, USA;Presenter;ODRE;19;
 12.11.19;14.11.19;2019 IEEE 11th International Conference on Cloud Computing Technology and Science, Sydney, Australia;Presenter;CloudCom;19;https://cloudcom.org/2019/
+21.4.20;24.4.20;CPS-IoT Week 2020, Sydney, Australia;Participant;CPSWeek;20;
 4.5.22;6.5.22;13th ACM/IEEE International Conference on Cyber-Physical Systems, Milano, Italy;Presenter;ICCPS;22;https://iccps.acm.org
 27.6.22;1.7.22;2022 IEEE 46th Annual Computers, Software, and Applications Conference, Torino, Italy;Presenter;COMPSAC;22;https://ieeecompsac.computer.org/2022/
-1.12.22;2.12.22;South Tyrol Free Software Conference, Bolzano, Italy;Speaker;SFSCON;22;https://www.sfscon.it
+1.12.22;2.12.22;South Tyrol Free Software Conference, Bolzano, Italy;Participant;SFSCON;22;https://www.sfscon.it
+5.12.22;8.12.22;43rd IEEE Real-Time Systems Symposium, Houston, TX, USA;Participant;RTSS;22;https://ieeexplore.ieee.org/xpl/conhome/9984840/proceeding
 14.10.25;16.10.25;2025 IEEE 30th International Workshop on Computer Aided Modeling and Design of Communication Links and Networks, Tempe, AZ, USA;Presenter;CAMAD;25;
+7.11.25;8.11.25;South Tyrol Free Software Conference, Bolzano, Italy;Speaker;SFSCON;25;https://www.sfscon.it
 19.11.25;21.11.25;The 15th International Conference on the Internet of Things, Vienna, Austria;Presenter;IoT;25;https://iot-conference.org/iot2025/
+2.12.25;5.12.25;46th IEEE Real-Time Systems Symposium, Boston, MA, USA;Participant;RTSS;25;https://ieeexplore.ieee.org/xpl/conhome/11189529/proceeding
