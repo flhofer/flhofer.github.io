@@ -1,5 +1,6 @@
 startofevent;endofevent;event;role;acronym;yearofevent;website
 10.4.18;13.4.18;CPS-IoT Week 2018, Porto, Portugal;Participant;CPSWeek;18;https://cpsweek2018.inria.fr
+27.5.18;3.6.18;40th International Conference on Software Engineering, Gothenburg, Sweden;Participant;ICSE;18;https://doi.org/10.1145/3180155
 11.10.18;12.10.18;12th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement, Oulu, Finland;Presenter;ESEM;18;https://esem-conferences.org
 15.10.18;18.10.18;2018 IEEE International Symposium on Software Reliability Engineering Workshops, Memphis, TN, USA;Presenter;ISSREW;18;https://issre.github.io/2018/
 13.10.19;13.10.19;2nd International Workshop on Operating Systems for Real-Time and Embedded Systems, New York, USA;Presenter;ODRE;19;
