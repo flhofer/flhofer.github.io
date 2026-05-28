@@ -55,8 +55,10 @@ if __name__ == "__main__":
     with open("./data/11-2-participation_research_projects.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')
         for row in reader:  
-            if not row["startofproject"].startswith("%"):              
-                expires_at = datetime.datetime.strptime(row["endofproject"], '%d.%m.%y')
+            startofproject = row.get("startofproject") or ""
+            endofproject = row.get("endofproject") or ""
+            if not startofproject.startswith("%") and endofproject:              
+                expires_at = datetime.datetime.strptime(endofproject, '%d.%m.%y')
                 row["fundingbody"] = fix_latex(row["fundingbody"])
                 row["endofproject_as_ISO_8601"] = expires_at.isoformat()
                 row["rolename"] = "Researcher"
@@ -137,7 +139,7 @@ if __name__ == "__main__":
     with open("./data/09-5-publications_journal_professional.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
         for row in reader:     
-            if not row["authors"].startswith("%"):        
+            if not row["starred"].startswith("%"):        
                 row["type"] = 4
                 row["authors"] = fix_latex(row["authors"])
                 row["titleofpublication"] = fix_latex(row["titleofpublication"])
