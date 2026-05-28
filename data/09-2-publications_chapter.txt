@@ -1,2 +1,2 @@
 starred;authors;titleofpublication;editors;titlebook;publisher;pages;yearofpublication;doiorwebaddress
-0;F. Hofer \& B. Russo;Architecture and Its Vulnerabilities in Smart-Lighting Systems;Dario Maggiorini, Vincenzo Piuri, and Simone A. Ludwig;Technologies for Smart Cities;Springer;29--52;2022;https://doi.org/10.1007/978-3-031-19309-4\_3
+0;F. Hofer \& B. Russo;Architecture and Its Vulnerabilities in Smart-Lighting Systems;Dario Maggiorini, Vincenzo Piuri, and Simone A. Ludwig;Technologies for Smart Cities;Springer;29--52;2022;https://doi.org/10.1007/978-3-031-05516-4_10
