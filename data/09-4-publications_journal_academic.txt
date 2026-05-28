@@ -1,3 +1,4 @@
 starred;authors;titleofpublication;titlejournal;volume;issueornumber;pages;yearofpublication;doiorwebaddress
 0;F. Hofer \& B. Russo;IEC 61131-3 Software Testing: a Portable Solution for native applications;IEEE Transactions on Industrial Informatics;16;6;3942--3951;2019;https://doi.org/10.1109/TII.2019.2941584
-0;F. Hofer, M. Sehr, A. Sangiovanni-Vincentelli, \& B. Russo;Industrial control via application containers: Maintaining determinism in IAAS;Journal of Systems Engineering;24;1;;2021;https://doi.org/10.1002/sys.21581
+0;F. Hofer, M. Sehr, A. Sangiovanni-Vincentelli, \& B. Russo;Industrial control via application containers: Maintaining determinism in IAAS;Journal of Systems Engineering;24;1;352--368;2021;https://doi.org/10.1002/sys.21590
+0;C. Pahl, O. C. Sezen, \& F. Hofer;Artificial Intelligence for Infrastructure-as-Code—A Systematic Literature Review;Electronics;15;4;755;2026;https://doi.org/10.3390/electronics15040755

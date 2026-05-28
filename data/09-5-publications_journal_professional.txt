@@ -1,2 +1,3 @@
-authors;titleofpublication;titlejournal;volume;issueornumber;pages;yearofpublication;doiorwebaddress
+starred;authors;titleofpublication;titlejournal;volume;issueornumber;pages;yearofpublication;doiorwebaddress
+0;N.G. Gunduz, F. Hofer, E. Guerra, N. El Ioini, \& C. Pahl;Automated Incident Management using Infrastructure-as-Code;IEEE Software;;;1--7;2026;https://doi.org/10.1109/MS.2026.3676644
 % No professional journal publications
