@@ -1,2 +1,5 @@
 startofproject;endofproject;projecttitle;acronym;fundingbody;website;awardholders
-# None yet
+1.9.18;30.8.20;Real-Time Control Containers;RTVM;Siemens Corporate Technology, USA;;Alberto L. Sangiovanni-Vincentelli
+1.11.18;31.10.22;Industry for the Smart-*;I4S;systems s.r.l.;https://www.systems.bz;Barbara Russo
+24.1.24;23.5.25;Joint Resource Management in Reconfigurable I4.0 Factories;JOULE;PRIN 2022;Paolo Bellavista
+#20.9.25;31.12.25;Behavior-enabled IoT;BeT;NextGenereationEU;Barbara Russo
