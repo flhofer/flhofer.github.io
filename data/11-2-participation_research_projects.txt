@@ -1,5 +1,5 @@
 startofproject;endofproject;projecttitle;acronym;fundingbody;website;awardholders
 1.9.18;30.8.20;Real-Time Control Containers;RTVM;Siemens Corporate Technology, USA;;Alberto L. Sangiovanni-Vincentelli
 1.11.18;31.10.22;Industry for the Smart-*;I4S;systems s.r.l.;https://www.systems.bz;Barbara Russo
-24.1.24;23.5.25;Joint Resource Management in Reconfigurable I4.0 Factories;JOULE;PRIN 2022;Paolo Bellavista
-#20.9.25;31.12.25;Behavior-enabled IoT;BeT;NextGenereationEU;Barbara Russo
+24.1.24;23.5.25;Joint Resource Management in Reconfigurable I4.0 Factories;JOULE;PRIN 2022;https://www.unibo.it/it/ricerca/progetti-e-iniziative/prin/19069/1906930541/26681;Paolo Bellavista
+#20.9.25;31.12.25;Behavior-enabled IoT;BeT;NextGenereationEU;https://betunivaq.github.io/;Barbara Russo
