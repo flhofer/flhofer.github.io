@@ -20,6 +20,21 @@ def fix_latex(text):
 if __name__ == "__main__":
     template_loader = jinja2.FileSystemLoader("templates")
     template_environment = jinja2.Environment(loader=template_loader)
+
+    career_jobs = []
+    with open("./data/01-1-career_jobs.txt", "r") as f:
+        reader = csv.DictReader(f, delimiter=";", quotechar='"')
+        for row in reader:
+            order = (row.get("order") or "").strip()
+            if order and not order.startswith("%"):
+                row["order"] = int(order)
+                row["period"] = fix_latex(row.get("period") or "")
+                row["role"] = fix_latex(row.get("role") or "")
+                row["organization"] = fix_latex(row.get("organization") or "")
+                row["summary"] = fix_latex(row.get("summary") or "")
+                career_jobs.append(row)
+
+    career_jobs.sort(key=lambda x: x["order"], reverse=True)
     
     events = []
     with open("./data/06-3-organization_events.txt", "r") as f:
@@ -151,7 +166,7 @@ if __name__ == "__main__":
     publications.sort(key=lambda x: x["yearofpublication"])
 
     template = template_environment.get_template("index.html.jinja")
-    outputText = template.render(events=events, projects=projects, teaching=teaching, publications=publications)
+    outputText = template.render(career_jobs=career_jobs, events=events, projects=projects, teaching=teaching, publications=publications)
     with open("./index.html", "w") as f:
         f.write(outputText)
 

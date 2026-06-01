@@ -95,62 +95,15 @@
                                     <div class="career-card p-4 p-lg-5">
                                         <h4 class="h5 mb-4">Selected career timeline</h4>
                                         <div class="list-group list-group-flush">
+                                            {% for job in career_jobs %}
                                             <div class="list-group-item px-0">
                                                 <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2025-present</strong>
-                                                    <span>Researcher, Free University of Bozen/Bolzano</span>
+                                                    <strong>{{job.period}}</strong>
+                                                    <span>{{job.role}}{% if job.organization != "" %}, {{job.organization}}{% endif %}</span>
                                                 </div>
-                                                <div class="text-secondary">Orchestration and performance engineering for reliable self-adaptive systems across the edge-cloud continuum.</div>
+                                                <div class="text-secondary">{{job.summary}}</div>
                                             </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2024-2025</strong>
-                                                    <span>Postdoctoral researcher, University of Bologna</span>
-                                                </div>
-                                                <div class="text-secondary">Distributed real-time orchestration in virtualized environments for Industry 4.0.</div>
-                                            </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2022-2023</strong>
-                                                    <span>Postdoctoral researcher, Free University of Bozen/Bolzano</span>
-                                                </div>
-                                                <div class="text-secondary">Industry collaboration with systems s.r.l. on cloud-based infrastructure monitoring for distributed smart-system architectures.</div>
-                                            </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2018-2020</strong>
-                                                    <span>Visiting researcher, UC Berkeley</span>
-                                                </div>
-                                                <div class="text-secondary">Industrial automation, Industry 4.0, and real-time control with containers.</div>
-                                            </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2015-2017</strong>
-                                                    <span>Freelance software engineer</span>
-                                                </div>
-                                                <div class="text-secondary">Development, testing, and maintenance of automation systems across B.T.S. Biogas, Danfoss Drives, and the Free University of Bozen.</div>
-                                            </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2010-2015</strong>
-                                                    <span>Senior software engineer, B.T.S. Biogas</span>
-                                                </div>
-                                                <div class="text-secondary">Control software for biogas plants, prototype testing, new control concepts, and coordination of software changes for commissioning and service teams.</div>
-                                            </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2008-2009</strong>
-                                                    <span>Software architect, TechnoAlpin</span>
-                                                </div>
-                                                <div class="text-secondary">Software for snowmaking systems, commissioning, remote fault support, and code migration from CoDeSys to Siemens S7.</div>
-                                            </div>
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>2000-2008</strong>
-                                                    <span>Maintenance engineer, MEMC Electronic Materials</span>
-                                                </div>
-                                                <div class="text-secondary">24/7 production plant maintenance, machine upgrades, diagnostics, and repair of control boards and components.</div>
-                                            </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
