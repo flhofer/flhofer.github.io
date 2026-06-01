@@ -17,6 +17,16 @@ def fix_latex(text):
     text = re.sub(r"\\ul\{(.*?)\}", r"\1", text)
     return text 
 
+def get_career_category_badge_class(category):
+    normalized = (category or "").strip().lower()
+    if normalized == "industry":
+        return "text-bg-primary"
+    if normalized == "industry research":
+        return "text-bg-warning"
+    if normalized == "academia":
+        return "text-bg-secondary"
+    return "text-bg-dark"
+
 if __name__ == "__main__":
     template_loader = jinja2.FileSystemLoader("templates")
     template_environment = jinja2.Environment(loader=template_loader)
@@ -32,6 +42,8 @@ if __name__ == "__main__":
                 row["role"] = fix_latex(row.get("role") or "")
                 row["organization"] = fix_latex(row.get("organization") or "")
                 row["summary"] = fix_latex(row.get("summary") or "")
+                row["category"] = fix_latex(row.get("category") or "Industry")
+                row["category_badge_class"] = get_career_category_badge_class(row["category"])
                 career_jobs.append(row)
 
     career_jobs.sort(key=lambda x: x["order"], reverse=True)

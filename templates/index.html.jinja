@@ -101,6 +101,7 @@
                                                     <strong>{{job.period}}</strong>
                                                     <span>{{job.role}}{% if job.organization != "" %}, {{job.organization}}{% endif %}</span>
                                                 </div>
+                                                <div class="mb-1"><span class="badge {{job.category_badge_class}}">{{job.category}}</span></div>
                                                 <div class="text-secondary">{{job.summary}}</div>
                                             </div>
                                             {% endfor %}

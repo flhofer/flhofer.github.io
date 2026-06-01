@@ -1,9 +1,9 @@
-order;period;role;organization;summary
-8;2025-present;Researcher;Free University of Bozen/Bolzano;Orchestration and performance engineering for reliable self-adaptive systems across the edge-cloud continuum.
-7;2024-2025;Postdoctoral researcher;University of Bologna;Distributed real-time orchestration in virtualized environments for Industry 4.0.
-6;2022-2023;Postdoctoral researcher;Free University of Bozen/Bolzano;Industry collaboration with systems s.r.l. on cloud-based infrastructure monitoring for distributed smart-system architectures.
-5;2018-2020;Visiting researcher;UC Berkeley;Industrial automation, Industry 4.0, and real-time control with containers.
-4;2015-2017;Freelance software engineer;;Development, testing, and maintenance of automation systems across B.T.S. Biogas, Danfoss Drives, and the Free University of Bozen-Bolzano.
-3;2010-2015;Senior software engineer;B.T.S. Biogas;Control software for biogas plants, prototype testing, new control concepts, and coordination of software changes for commissioning and service teams.
-2;2008-2009;Software architect;TechnoAlpin;Software for snowmaking systems, commissioning, remote fault support, and code migration from CoDeSys to Siemens S7.
-1;2000-2008;Maintenance engineer;MEMC Electronic Materials;24/7 production plant maintenance, machine upgrades, diagnostics, and repair of control boards and components.
+order;period;role;organization;summary;category
+8;2025-present;Researcher;Free University of Bozen/Bolzano;Orchestration and performance engineering for reliable self-adaptive systems across the edge-cloud continuum.;Academia
+7;2024-2025;Postdoctoral researcher;University of Bologna;Distributed real-time orchestration in virtualized environments for Industry 4.0.;Academia
+6;2022-2023;Postdoctoral researcher;Free University of Bozen/Bolzano;Industry collaboration with systems s.r.l. on cloud-based infrastructure monitoring for distributed smart-system architectures.;Industry research
+5;2018-2020;Visiting researcher;UC Berkeley;Industrial automation, Industry 4.0, and real-time control with containers.;Industry research
+4;2015-2017;Freelance software engineer;;Development, testing, and maintenance of automation systems across B.T.S. Biogas, Danfoss Drives, and the Free University of Bozen-Bolzano.;Industry
+3;2010-2015;Senior software engineer;B.T.S. Biogas;Control software for biogas plants, prototype testing, new control concepts, and coordination of software changes for commissioning and service teams.;Industry
+2;2008-2009;Software architect;TechnoAlpin;Software for snowmaking systems, commissioning, remote fault support, and code migration from CoDeSys to Siemens S7.;Industry
+1;2000-2008;Maintenance engineer;MEMC Electronic Materials;24/7 production plant maintenance, machine upgrades, diagnostics, and repair of control boards and components.;Industry
