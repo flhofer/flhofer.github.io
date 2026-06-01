@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Personal web site of Florian Hofer" />
+        <meta name="description" content="Personal web site of Florian Hofer focused on industry, applied research, and teaching" />
         <meta name="author" content="Florian Hofer" />
         <title>Florian Hofer</title>
         <!-- Favicon-->
@@ -26,10 +26,11 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#career">Career</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#research">Applied research</a></li>
                         <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,10 +53,42 @@
                     </div>
                     <div class="col-lg-6">
                         <h3 class="mt-0"> <i class="bi-info-circle fs-2 text-primary"></i> About me</h3>
-                        <p>Florian Hofer is a researcher at the Free University of Bozen-Bolzano, Faculty of Engineering.</p>
+                        <p>Florian Hofer works across industry, industry research, and academia. His career spans nearly two decades of building and studying software for industrial and cyber-physical systems.</p>
                         <p>He holds a PhD in Computer Science from the Free University of Bozen-Bolzano (2022), with a thesis on "Resilience and Weaknesses of Smart Systems' Architectures".</p>
-                        <p>His research focuses on enhancing the security and reliability of smart system architectures. He is particularly interested in real-time systems, industrial control systems, programmable logic controllers (IEC 61131-3), containerization and virtualization for Industry 4.0, cyber-physical systems, and IoT architectures including LoRaWAN and smart-lighting systems.</p>
+                        <p>His work focuses on real-time systems, industrial control systems, programmable logic controllers (IEC 61131-3), containerization and virtualization for Industry 4.0, cyber-physical systems, and IoT architectures including LoRaWAN and smart-lighting systems.</p>
                         <p><a class="btn btn-primary btn-xl" href="https://api.scientificnet.org/public-webpage-data/staff/37220/cv">Download CV</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Career -->
+        <section class="page-section bg-light" id="career">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="career-band p-4 p-lg-5">
+                            <p class="career-kicker mb-2">Career snapshot</p>
+                            <div class="row g-4 align-items-stretch">
+                                <div class="col-md-4">
+                                    <div class="career-card p-4">
+                                        <h4 class="h5 mb-3"><i class="bi-building fs-4 text-primary"></i> Industry-first systems</h4>
+                                        <p class="mb-0">Designing and evaluating software for production environments where reliability, determinism, and maintainability matter.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="career-card p-4">
+                                        <h4 class="h5 mb-3"><i class="bi-diagram-3 fs-4 text-primary"></i> Applied research</h4>
+                                        <p class="mb-0">Turning industrial problems into research projects, prototypes, and publications that are useful beyond the lab.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="career-card p-4">
+                                        <h4 class="h5 mb-3"><i class="bi-mortarboard fs-4 text-primary"></i> Teaching and mentoring</h4>
+                                        <p class="mb-0">Sharing practical experience with students and colleagues to bridge deployed systems and academic methods.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,11 +147,11 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="mt-0"><i class="bi-mortarboard fs-2 text-primary"></i> Research activities and interest</h2>
+                        <h2 class="mt-0"><i class="bi-mortarboard fs-2 text-primary"></i> Applied research and interests</h2>
                         <hr class="divider" />
                         <div class="mb-4 text-start">
-                            <p>My research lies at the intersection of software engineering and hardware/systems engineering, focusing on the challenges posed by Industry 4.0 and smart system architectures. I am particularly interested in how software systems can be made more reliable, deterministic, and secure when operating in real-time and safety-critical environments.</p>
-                            <p>Key research topics include: real-time systems and scheduling, industrial control systems and programmable logic controllers (PLCs / IEC 61131-3), containerization and virtualization for cyber-physical systems, smart-lighting and LoRaWAN/IoT architectures, and automated software testing for embedded and industrial systems.</p>
+                            <p>My applied research sits at the intersection of software engineering and industrial systems. I focus on problems that matter in production settings, where software must be reliable, deterministic, secure, and maintainable under real-world constraints.</p>
+                            <p>Key topics include real-time systems and scheduling, industrial control systems and programmable logic controllers (PLCs / IEC 61131-3), containerization and virtualization for cyber-physical systems, smart-lighting and LoRaWAN/IoT architectures, and automated software testing for embedded and industrial systems.</p>
                             <p>This is the list of research projects I participated in:</p>
                             <ul><div id="listofprojects">
                                 {% for project in projects|reverse %}
@@ -147,10 +180,10 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="mt-0"><i class="bi-book fs-2 text-primary"></i> Teaching activities</h2>
+                        <h2 class="mt-0"><i class="bi-book fs-2 text-primary"></i> Teaching and mentoring</h2>
                         <hr class="divider" />
                         <div class="mb-4 text-start">
-                            <p>Teaching is an integral part of my academic work. I aim to bring my research experience into the classroom, bridging the gap between theoretical concepts and practical applications in software engineering and distributed systems.</p>
+                            <p>Teaching is one way I connect industry practice, applied research, and academic training. I aim to bring practical experience into the classroom and connect theory with the kinds of systems engineers build and operate in the field.</p>
                             <p>This is the list of courses I have held:</p>
                             <ul><div id="listofteaching">
                                 {% for item in teaching %}
