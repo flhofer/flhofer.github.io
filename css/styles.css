@@ -71,6 +71,38 @@ hr.divider-light {
   font-size: 1rem;
 }
 
+.career-pillars {
+  margin: 0.25rem 0 1.1rem;
+}
+
+.career-mini-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  border-radius: 0.85rem;
+  height: 100%;
+  padding: 0.8rem 0.9rem;
+}
+
+.career-mini-card h4 {
+  align-items: center;
+  display: flex;
+  font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  gap: 0.45rem;
+  margin: 0 0 0.32rem;
+}
+
+.career-mini-card h4 i {
+  color: #0d6efd;
+}
+
+.career-mini-card p {
+  color: #64748b;
+  font-size: 0.87rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
 .career-timeline {
   margin-top: 1.1rem;
 }
@@ -131,6 +163,10 @@ hr.divider-light {
 }
 
 @media (max-width: 768px) {
+  .career-pillars {
+    margin-bottom: 0.9rem;
+  }
+
   .career-entry {
     padding-left: 1rem;
   }
