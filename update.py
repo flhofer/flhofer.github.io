@@ -49,18 +49,21 @@ if __name__ == "__main__":
     career_jobs.sort(key=lambda x: x["order"], reverse=True)
     
     events = []
-    with open("./data/11-1-partecipation_events.txt", "r") as f:
-        reader = csv.DictReader(f, delimiter=";", quotechar='"')
-        for row in reader:
-            if not row["endofevent"].startswith("%"):
-                expires_at = datetime.datetime.strptime(row["endofevent"], '%d.%m.%y')
-                row["endofevent_as_ISO_8601"] = expires_at.isoformat()
-                row["role"] = fix_latex(row["role"])
-                roles_without_brackets = re.sub(r"\(.*?\)", "", row["role"])
-                roles = re.split(r', |\& ', roles_without_brackets)
-                row["roles"] = roles
-                row["event"] = fix_latex(row["event"])
-                events.append(row)
+    for p in ["./data/11-1-partecipation_events.txt", "./data/06-3-organization_events.txt"]:
+        with open(p, "r") as f:
+            reader = csv.DictReader(f, delimiter=";", quotechar='"')
+            for row in reader:
+                if not row["startofevent"].startswith("%"):
+                    expires_at = datetime.datetime.strptime(row["endofevent"], '%d.%m.%y')
+                    row["endofevent_as_ISO_8601"] = expires_at.isoformat()
+                    row["role"] = fix_latex(row["role"])
+                    roles_without_brackets = re.sub(r"\(.*?\)", "", row["role"])
+                    roles = re.split(r', |\& ', roles_without_brackets)
+                    row["roles"] = roles
+                    row["event"] = fix_latex(row["event"])
+                    events.append(row)
+    
+    events.sort(key=lambda x: x["endofevent_as_ISO_8601"])
 
     projects = []
     with open("./data/08-5-research_grants.txt", "r") as f:        
@@ -92,6 +95,8 @@ if __name__ == "__main__":
                 row["roletype"] = 3
                 projects.append(row)
 
+    projects.sort(key=lambda x: x["endofproject_as_ISO_8601"])
+
     teaching = []
     with open("./data/05-1-teaching_experience.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
@@ -104,8 +109,6 @@ if __name__ == "__main__":
                 if row["role"].lower().__contains__("ta"):
                     row["isteachingassistant"] = True
                 teaching.append(row)
-
-    projects.sort(key=lambda x: x["endofproject_as_ISO_8601"])
 
     publications = []
     with open("./data/09-1-publications_book_authored.txt", "r") as f:        
