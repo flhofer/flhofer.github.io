@@ -107,6 +107,66 @@
                 </div>
             </div>
         </section>
+        <!-- Research-->
+        <section class="page-section" id="research">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0"><i class="bi-mortarboard fs-2 text-primary"></i> Applied research and interests</h2>
+                        <hr class="divider" />
+                        <div class="mb-4 text-start">
+                            <p>My applied research sits at the intersection of software engineering and industrial systems. I focus on problems that matter in production settings, where software must be reliable, deterministic, secure, and maintainable under real-world constraints.</p>
+                            <p>Key topics include real-time systems and scheduling, industrial control systems and programmable logic controllers (PLCs / IEC 61131-3), containerization and virtualization for cyber-physical systems, smart-lighting and LoRaWAN/IoT architectures, and automated software testing for embedded and industrial systems.</p>
+                            <p>This is the list of research projects I participated in:</p>
+                            <ul><div id="listofprojects">
+                                {% for project in projects|reverse %}
+                                    <project expires="{{project.endofproject_as_ISO_8601}}">
+                                    <li> 
+                                        {{project.startofproject}}&#8211;{{project.endofproject}}: {{project.rolename}}, 
+                                        {% if project.website != "" %}<a href="{{project.website}}">{% endif %}<i>{{project.projecttitle}}{% if project.website != "" %}</a>{% endif %}{% if project.acronym != "" %} ({{project.acronym}}){% endif %}</i>. Funding body: {{project.fundingbody}}.
+                                        {% if project.roletype == 1 %}
+                                            <span class="badge text-bg-danger">{{project.rolename}}</span>            
+                                        {% elif project.roletype == 2 %}                                            
+                                            <span class="badge text-bg-primary">{{project.rolename}}</span>
+                                        {% else %}
+                                            <span class="badge text-bg-secondary">{{project.rolename}}</span>                        
+                                        {% endif %}
+                                    </li>
+                                    </project>
+                                {% endfor %}
+                            </div></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Publications -->
+        <section class="page-section" id="publications">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0"><i class="bi-file-earmark-text fs-2 text-primary"></i> Publications</h2>
+                        <hr class="divider" />
+                        <div class="mb-4 text-start">
+                            <p>Here is the list of my current publications. Please also have a look at my page on <a href="https://scholar.google.com/citations?user=Abi2m8sAAAAJ&hl=en">Google Scholar</a>.</p>
+                            <ol><div id="listofpublications">
+                                {% for item in publications|reverse %}
+                                    <publication>
+                                    <li>
+                                        {% if item.type == 1 %}<span class="badge badge-bg-book">Book</span>{% endif %}
+                                        {% if item.type == 2 %}<span class="badge badge-bg-chapter">Book chapter</span>{% endif %}
+                                        {% if item.type == 3 %}<span class="badge badge-bg-conference">{{item.typeofcontribution}}</span>{% endif %}
+                                        {% if item.type == 4 %}<span class="badge badge-bg-journal">Journal paper</span>{% endif %}
+                                        {{item.authors}} ({{item.yearofpublication}}{% if item.type == 3 %}, {{item.dates}}{% endif %}).{% if item.type == 1 or item.type == 3 %} <i>{{item.titleofpublication}}</i>{% endif %}{% if item.type == 2 or item.type == 4 %} {{item.titleofpublication}}.{% endif %}{% if item.type == 2 %} In {{item.editors}} (Eds.), <i>{{item.titlebook}}</i>. (pp. {{item.pages}}).{% endif %}{% if item.type == 1 %} {{item.publisher}}{% endif %}{% if item.type == 3 %} {{item.conference}} ({{item.acronym}}), {{item.location}}.{% endif %}{% if item.type == 4 %} <i>{{item.titlejournal}} {{item.volume}}</i>{% if item.issueornumber != "" %}({{item.issueornumber}}){% endif %}, {{item.pages}}.{% endif %}{% if item.doiorwebaddress != "" %} <a href="{{item.doiorwebaddress}}">{{item.doiorwebaddress}}</a>{% endif %}
+                                    </li>
+                                    </publication>
+                                {% endfor %}
+                            </div>
+                        </div></ol>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Events -->
         <section class="page-section bg-light" id="events">
             <div class="container px-4 px-lg-5">
@@ -156,39 +216,6 @@
                 </div>
             </div>
         </section>
-        <!-- Research-->
-        <section class="page-section" id="research">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="mt-0"><i class="bi-mortarboard fs-2 text-primary"></i> Applied research and interests</h2>
-                        <hr class="divider" />
-                        <div class="mb-4 text-start">
-                            <p>My applied research sits at the intersection of software engineering and industrial systems. I focus on problems that matter in production settings, where software must be reliable, deterministic, secure, and maintainable under real-world constraints.</p>
-                            <p>Key topics include real-time systems and scheduling, industrial control systems and programmable logic controllers (PLCs / IEC 61131-3), containerization and virtualization for cyber-physical systems, smart-lighting and LoRaWAN/IoT architectures, and automated software testing for embedded and industrial systems.</p>
-                            <p>This is the list of research projects I participated in:</p>
-                            <ul><div id="listofprojects">
-                                {% for project in projects|reverse %}
-                                    <project expires="{{project.endofproject_as_ISO_8601}}">
-                                    <li> 
-                                        {{project.startofproject}}&#8211;{{project.endofproject}}: {{project.rolename}}, 
-                                        {% if project.website != "" %}<a href="{{project.website}}">{% endif %}<i>{{project.projecttitle}}{% if project.website != "" %}</a>{% endif %}{% if project.acronym != "" %} ({{project.acronym}}){% endif %}</i>. Funding body: {{project.fundingbody}}.
-                                        {% if project.roletype == 1 %}
-                                            <span class="badge text-bg-danger">{{project.rolename}}</span>            
-                                        {% elif project.roletype == 2 %}                                            
-                                            <span class="badge text-bg-primary">{{project.rolename}}</span>
-                                        {% else %}
-                                            <span class="badge text-bg-secondary">{{project.rolename}}</span>                        
-                                        {% endif %}
-                                    </li>
-                                    </project>
-                                {% endfor %}
-                            </div></ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- Teaching -->
         <section class="page-section bg-light" id="teaching">
             <div class="container px-4 px-lg-5">
@@ -216,33 +243,6 @@
                                 {% endfor %}
                             </div></ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>        
-        <!-- Publications -->
-        <section class="page-section" id="publications">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="mt-0"><i class="bi-file-earmark-text fs-2 text-primary"></i> Publications</h2>
-                        <hr class="divider" />
-                        <div class="mb-4 text-start">
-                            <p>Here is the list of my current publications. Please also have a look at my page on <a href="https://scholar.google.com/citations?user=Abi2m8sAAAAJ&hl=en">Google Scholar</a>.</p>
-                            <ol><div id="listofpublications">
-                                {% for item in publications|reverse %}
-                                    <publication>
-                                    <li>
-                                        {% if item.type == 1 %}<span class="badge badge-bg-book">Book</span>{% endif %}
-                                        {% if item.type == 2 %}<span class="badge badge-bg-chapter">Book chapter</span>{% endif %}
-                                        {% if item.type == 3 %}<span class="badge badge-bg-conference">{{item.typeofcontribution}}</span>{% endif %}
-                                        {% if item.type == 4 %}<span class="badge badge-bg-journal">Journal paper</span>{% endif %}
-                                        {{item.authors}} ({{item.yearofpublication}}{% if item.type == 3 %}, {{item.dates}}{% endif %}).{% if item.type == 1 or item.type == 3 %} <i>{{item.titleofpublication}}</i>{% endif %}{% if item.type == 2 or item.type == 4 %} {{item.titleofpublication}}.{% endif %}{% if item.type == 2 %} In {{item.editors}} (Eds.), <i>{{item.titlebook}}</i>. (pp. {{item.pages}}).{% endif %}{% if item.type == 1 %} {{item.publisher}}{% endif %}{% if item.type == 3 %} {{item.conference}} ({{item.acronym}}), {{item.location}}.{% endif %}{% if item.type == 4 %} <i>{{item.titlejournal}} {{item.volume}}</i>{% if item.issueornumber != "" %}({{item.issueornumber}}){% endif %}, {{item.pages}}.{% endif %}{% if item.doiorwebaddress != "" %} <a href="{{item.doiorwebaddress}}">{{item.doiorwebaddress}}</a>{% endif %}
-                                    </li>
-                                    </publication>
-                                {% endfor %}
-                            </div>
-                        </div></ol>
                     </div>
                 </div>
             </div>
