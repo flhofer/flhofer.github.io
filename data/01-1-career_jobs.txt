@@ -1,6 +1,6 @@
 order;period;role;organization;summary;category
 8;2025-present;Researcher;Free University of Bozen/Bolzano;Orchestration and performance engineering for reliable self-adaptive systems across the edge-cloud continuum.;Academia
-7;2024-2025;Postdoctoral researcher;University of Bologna;Distributed real-time orchestration in virtualized environments for Industry 4.0.;Academia
+7;2024-2025;Postdoctoral researcher;University of Bologna;Distributed real-time orchestration in virtualized environments for Industry 4.0, with IMA, Bonfiglioli, Siemens and CodeSys at BiRex Bologna;Industry research
 6;2022-2023;Postdoctoral researcher;Free University of Bozen/Bolzano;Industry collaboration with systems s.r.l. on cloud-based infrastructure monitoring for distributed smart-system architectures.;Industry research
 5;2018-2020;Visiting researcher;UC Berkeley;Industrial automation, Industry 4.0, and real-time control with containers.;Industry research
 4;2015-2017;Freelance software engineer;;Development, testing, and maintenance of automation systems across B.T.S. Biogas, Danfoss Drives, and the Free University of Bozen-Bolzano.;Industry
