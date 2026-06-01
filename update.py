@@ -121,7 +121,7 @@ if __name__ == "__main__":
                 row["doiorwebaddress"] = fix_latex(row["doiorwebaddress"])
                 publications.append(row)
 
-    with open("./data/09-1-publications_book_edited.txt", "r") as f:        
+    with open("./data/09-2-publications_book_edited.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
         for row in reader:          
             if not row["starred"].startswith("%"):              
@@ -131,7 +131,7 @@ if __name__ == "__main__":
                 row["doiorwebaddress"] = fix_latex(row["doiorwebaddress"])
                 publications.append(row)
 
-    with open("./data/09-2-publications_chapter.txt", "r") as f:        
+    with open("./data/09-3-publications_chapter.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
         for row in reader:             
             if not row["starred"].startswith("%"):
@@ -142,7 +142,7 @@ if __name__ == "__main__":
                 row["pages"] = fix_latex(row["pages"])    
                 publications.append(row)
 
-    with open("./data/09-3-publications_conference.txt", "r") as f:        
+    with open("./data/09-4-publications_conference.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
         for row in reader:         
             if not row["starred"].startswith("%"):    
@@ -154,7 +154,7 @@ if __name__ == "__main__":
                 row["acronym"] = fix_latex(row["acronym"])                
                 publications.append(row)
 
-    with open("./data/09-4-publications_journal_academic.txt", "r") as f:        
+    with open("./data/09-5-publications_journal_academic.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
         for row in reader:             
             if not row["starred"].startswith("%"):
@@ -166,7 +166,7 @@ if __name__ == "__main__":
                 row["pages"] = fix_latex(row["pages"])                            
                 publications.append(row)
 
-    with open("./data/09-5-publications_journal_professional.txt", "r") as f:        
+    with open("./data/09-6-publications_journal_professional.txt", "r") as f:        
         reader = csv.DictReader(f, delimiter=";", quotechar='"')        
         for row in reader:     
             if not row["starred"].startswith("%"):        
