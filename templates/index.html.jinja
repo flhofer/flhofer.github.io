@@ -68,46 +68,19 @@
                     <div class="col-lg-10">
                         <div class="career-band p-4 p-lg-5">
                             <p class="career-kicker mb-2">Career snapshot</p>
-                            <h3 class="h2 mb-3">Industrial automation first, then applied research on top</h3>
-                            <p class="mb-4">The through-line of my career is practical software for industrial systems: first in production environments, then in industry-linked research, and now in academia with a strong applied focus.</p>
-                            <div class="row g-4 mb-4 align-items-stretch">
-                                <div class="col-md-4">
-                                    <div class="career-card p-4">
-                                        <h4 class="h5 mb-3"><i class="bi-building fs-4 text-primary"></i> Production systems</h4>
-                                        <p class="mb-0">Maintenance, control software, commissioning, and test engineering in chemical, renewable energy, and machine-building environments.</p>
+                            <h3 class="h3 mb-2">Industrial automation first, then applied research</h3>
+                            <p class="career-lead mb-3">A compact view of roles across industry, industry research, and academia.</p>
+                            <div class="career-timeline">
+                                {% for job in career_jobs %}
+                                <article class="career-entry">
+                                    <div class="career-entry-head">
+                                        <span class="career-period">{{job.period}}</span>
+                                        <span class="badge {{job.category_badge_class}}">{{job.category}}</span>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="career-card p-4">
-                                        <h4 class="h5 mb-3"><i class="bi-diagram-3 fs-4 text-primary"></i> Industry research</h4>
-                                        <p class="mb-0">Applied research on Industry 4.0, real-time orchestration, containers, and smart-system architectures with industrial partners.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="career-card p-4">
-                                        <h4 class="h5 mb-3"><i class="bi-mortarboard fs-4 text-primary"></i> Teaching and mentoring</h4>
-                                        <p class="mb-0">Courses and supervision that bring practical systems experience into the classroom and lab.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <div class="career-card p-4 p-lg-5">
-                                        <h4 class="h5 mb-4">Selected career timeline</h4>
-                                        <div class="list-group list-group-flush">
-                                            {% for job in career_jobs %}
-                                            <div class="list-group-item px-0">
-                                                <div class="d-flex justify-content-between flex-column flex-md-row gap-2">
-                                                    <strong>{{job.period}}</strong>
-                                                    <span>{{job.role}}{% if job.organization != "" %}, {{job.organization}}{% endif %}</span>
-                                                </div>
-                                                <div class="mb-1"><span class="badge {{job.category_badge_class}}">{{job.category}}</span></div>
-                                                <div class="text-secondary">{{job.summary}}</div>
-                                            </div>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                </div>
+                                    <h4 class="career-role">{{job.role}}{% if job.organization != "" %}, {{job.organization}}{% endif %}</h4>
+                                    <p class="career-summary">{{job.summary}}</p>
+                                </article>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

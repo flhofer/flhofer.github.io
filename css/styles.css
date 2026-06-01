@@ -53,8 +53,8 @@ hr.divider-light {
 }
 
 .career-band {
-  background: linear-gradient(180deg, rgba(248, 249, 250, 1) 0%, rgba(238, 242, 247, 1) 100%);
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(246, 248, 251, 0.95) 100%);
+  border: 1px solid rgba(33, 37, 41, 0.07);
   border-radius: 1.25rem;
 }
 
@@ -66,15 +66,82 @@ hr.divider-light {
   text-transform: uppercase;
 }
 
-.career-card {
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.08);
-  height: 100%;
+.career-lead {
+  color: #4b5563;
+  font-size: 1rem;
 }
 
-.career-card h4 {
+.career-timeline {
+  margin-top: 1.1rem;
+}
+
+.career-entry {
+  border-left: 1px solid rgba(100, 116, 139, 0.35);
+  margin-left: 0.35rem;
+  padding: 0 0 1.1rem 1.2rem;
+  position: relative;
+}
+
+.career-entry::before {
+  background-color: #0d6efd;
+  border-radius: 999px;
+  content: "";
+  height: 0.5rem;
+  left: -0.31rem;
+  position: absolute;
+  top: 0.4rem;
+  width: 0.5rem;
+}
+
+.career-entry:last-child {
+  padding-bottom: 0;
+}
+
+.career-entry-head {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.career-period {
+  color: #334155;
   font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.career-entry .badge {
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.career-role {
+  font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.04rem;
+  margin: 0;
+}
+
+.career-summary {
+  color: #6b7280;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  margin: 0.2rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .career-entry {
+    padding-left: 1rem;
+  }
+
+  .career-role {
+    font-size: 1rem;
+  }
+
+  .career-summary {
+    font-size: 0.93rem;
+  }
 }
 
 #mainNav .navbar-brand {
