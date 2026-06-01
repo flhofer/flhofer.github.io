@@ -49,7 +49,7 @@ if __name__ == "__main__":
     career_jobs.sort(key=lambda x: x["order"], reverse=True)
     
     events = []
-    with open("./data/06-3-organization_events.txt", "r") as f:
+    with open("./data/11-1-partecipation_events.txt", "r") as f:
         reader = csv.DictReader(f, delimiter=";", quotechar='"')
         for row in reader:
             if not row["endofevent"].startswith("%"):
