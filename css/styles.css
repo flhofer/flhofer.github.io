@@ -15,15 +15,83 @@
   src: url("../assets/fonts/D-DINCondensed.woff") format("woff");
 }
 
+:root {
+  --site-bg: #f4efe7;
+  --site-surface: rgba(255, 252, 246, 0.92);
+  --site-surface-strong: #ffffff;
+  --site-text: #1f2937;
+  --site-muted: #5f6b78;
+  --site-accent: #0f766e;
+  --site-accent-soft: rgba(15, 118, 110, 0.12);
+  --site-border: rgba(31, 41, 55, 0.11);
+  --site-shadow: 0 1.25rem 2.75rem rgba(31, 41, 55, 0.08);
+  --bs-body-bg: var(--site-bg);
+  --bs-body-color: var(--site-text);
+  --bs-body-bg-rgb: 244, 239, 231;
+  --bs-body-color-rgb: 31, 41, 55;
+  --bs-primary: var(--site-accent);
+  --bs-primary-rgb: 15, 118, 110;
+  --bs-secondary: var(--site-muted);
+  --bs-secondary-rgb: 95, 107, 120;
+  --bs-warning: #d97706;
+  --bs-warning-rgb: 217, 119, 6;
+  --bs-light: #f7f3ec;
+  --bs-light-rgb: 247, 243, 236;
+  --bs-link-color: var(--site-accent);
+  --bs-link-hover-color: #0b625b;
+}
+
 * {
-  font-size: 1.1rem;  
   font-family: din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+  background: var(--site-bg);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.08), transparent 34%),
+    radial-gradient(circle at top right, rgba(217, 119, 6, 0.06), transparent 28%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--site-bg) 100%);
+  color: var(--site-text);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+::selection {
+  background: var(--site-accent-soft);
+  color: var(--site-text);
+}
+
+img {
+  max-width: 100%;
 }
 
 input, textarea, button {font-family: inherit}
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--site-text);
+  font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--site-text);
+}
+
+a {
+  color: var(--site-accent);
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.08em;
+}
+
+a:hover {
+  color: #0b625b;
+}
+
 .page-section {
-  padding: 8rem 0;
+  padding: 7.5rem 0;
 }
 
 .text-white-75 {
@@ -31,10 +99,11 @@ input, textarea, button {font-family: inherit}
 }
 
 hr.divider {
-  height: 0.2rem;
-  max-width: 3.25rem;
+  background: linear-gradient(90deg, transparent, var(--site-accent), transparent);
+  border-radius: 999px;
+  height: 0.22rem;
+  max-width: 4.5rem;
   margin: 1.5rem auto;
-  background-color: #000000;
   opacity: 1;
 }
 
@@ -43,23 +112,56 @@ hr.divider-light {
 }
 
 #mainNav {
-  background-color: #fff;
-  transition: background-color 0.2s ease;
+  background: rgba(255, 252, 246, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(31, 41, 55, 0.06);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#mainNav .navbar-brand {
+  color: var(--site-text);
+  font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 .important {
-  background: rgba(255, 255, 0, 0.397);
-  padding: 0px 0px;
+  background: var(--site-accent-soft);
+  border-radius: 0.25rem;
+  padding: 0 0.2rem;
+}
+
+#about {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(15, 118, 110, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(244, 239, 231, 0.25));
+}
+
+#about img {
+  border: 4px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--site-shadow);
+}
+
+#about h3 {
+  margin-bottom: 0.35rem;
+}
+
+#about .text-secondary,
+.career-lead,
+.career-mini-card p,
+.career-summary,
+.expired_event {
+  color: var(--site-muted) !important;
 }
 
 .career-band {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(246, 248, 251, 0.95) 100%);
-  border: 1px solid rgba(33, 37, 41, 0.07);
+  background: linear-gradient(180deg, var(--site-surface-strong) 0%, rgba(247, 243, 236, 0.95) 100%);
+  border: 1px solid var(--site-border);
   border-radius: 1.25rem;
+  box-shadow: var(--site-shadow);
 }
 
 .career-kicker {
-  color: #6c757d;
+  color: var(--site-accent);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -67,7 +169,6 @@ hr.divider-light {
 }
 
 .career-lead {
-  color: #4b5563;
   font-size: 1rem;
 }
 
@@ -76,11 +177,12 @@ hr.divider-light {
 }
 
 .career-mini-card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(100, 116, 139, 0.16);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(31, 41, 55, 0.08);
   border-radius: 0.85rem;
   height: 100%;
   padding: 0.8rem 0.9rem;
+  box-shadow: 0 0.6rem 1.4rem rgba(31, 41, 55, 0.04);
 }
 
 .career-mini-card h4 {
@@ -93,11 +195,10 @@ hr.divider-light {
 }
 
 .career-mini-card h4 i {
-  color: #0d6efd;
+  color: var(--site-accent);
 }
 
 .career-mini-card p {
-  color: #64748b;
   font-size: 0.87rem;
   line-height: 1.35;
   margin: 0;
@@ -108,14 +209,14 @@ hr.divider-light {
 }
 
 .career-entry {
-  border-left: 1px solid rgba(100, 116, 139, 0.35);
+  border-left: 1px solid rgba(31, 41, 55, 0.2);
   margin-left: 0.35rem;
   padding: 0 0 1.1rem 1.2rem;
   position: relative;
 }
 
 .career-entry::before {
-  background-color: #0d6efd;
+  background-color: var(--site-accent);
   border-radius: 999px;
   content: "";
   height: 0.5rem;
@@ -137,7 +238,7 @@ hr.divider-light {
 }
 
 .career-period {
-  color: #334155;
+  color: var(--site-text);
   font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
@@ -150,13 +251,11 @@ hr.divider-light {
 }
 
 .career-role {
-  font-family: din-bold, din, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.04rem;
   margin: 0;
 }
 
 .career-summary {
-  color: #6b7280;
   font-size: 0.96rem;
   line-height: 1.45;
   margin: 0.2rem 0 0;
@@ -181,67 +280,63 @@ hr.divider-light {
 }
 
 #mainNav .navbar-brand {
-  /* font-weight: 700; */
-  color: #212529;
+  color: var(--site-text);
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
-  /* font-weight: 700; */
-  /* font-size: 1.25rem; */
+  color: var(--site-muted);
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: var(--bs-primary);
+  color: var(--site-accent);
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: var(--bs-primary) !important;
+  color: var(--site-accent) !important;
 }
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
-    /* background-color: transparent; */
   }
   #mainNav .navbar-brand {
-    color: #212529;
+    color: var(--site-text);
   }
   #mainNav .navbar-brand:hover {
-    color: var(--bs-primary);
+    color: var(--site-accent);
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: #212529;
+    color: var(--site-text);
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: var(--bs-primary);
+    color: var(--site-accent);
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
   }
   #mainNav.navbar-shrink {
-    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 0.65rem 1.5rem rgba(31, 41, 55, 0.08);
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #212529;
+    color: var(--site-text);
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
-    color: var(--bs-primary);
+    color: var(--site-accent);
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
-    color: #212529;
+    color: var(--site-text);
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: var(--bs-primary);
+    color: var(--site-accent);
   }
 }
 
 .expired_event {
-  color: rgb(128, 128, 128);
+  color: var(--site-muted);
 }
 
 .expired_event a {
-  color: rgb(128, 128, 128);
+  color: var(--site-muted);
 }
 
 .expired_event .badge {
@@ -249,23 +344,24 @@ hr.divider-light {
 }
 
 .badge {
-  font-weight: 400 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
 }
 
 .badge-bg-book {
-  background-color: rgb(250, 195, 53)
+  background-color: #d97706
 }
 
 .badge-bg-chapter {
-  background-color: rgb(250, 195, 53)
+  background-color: #d97706
 }
 
 .badge-bg-conference {
-  background-color: rgb(9, 96, 150)
+  background-color: #0f766e
 }
 
 .badge-bg-journal {
-  background-color: rgb(193, 36, 103)
+  background-color: #be185d
 }
 
 a {
