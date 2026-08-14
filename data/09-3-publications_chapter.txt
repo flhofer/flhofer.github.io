@@ -1,2 +1,3 @@
 starred;authors;titleofpublication;editors;titlebook;publisher;pages;yearofpublication;doiorwebaddress
 0;F. Hofer \& B. Russo;Architecture and Its Vulnerabilities in Smart-Lighting Systems;Dario Maggiorini, Vincenzo Piuri, and Simone A. Ludwig;Technologies for Smart Cities;Springer;29--52;2022;https://doi.org/10.1007/978-3-031-05516-4_10
+0;C. Pahl, N.G. Gunduz, O.C. Sezen, A. Ghamgosar, F. Hofer, \& N. El Ioini;A Systematic Review of Infrastructure-as-Code Technologies;;Cloud Computing and Services Science;Springer-Verlag;;2025;
